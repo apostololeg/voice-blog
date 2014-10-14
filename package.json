@@ -1,0 +1,15 @@
+{
+  "name": "spech-test",
+  "description": "speech generator",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "dependencies": {
+    "express": "3.x.x",
+    "jade": "*",
+    "vow-fs": "*",
+    "get-voice": "*"
+  },
+  "author": "truerenton"
+}

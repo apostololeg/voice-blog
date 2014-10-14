@@ -1,0 +1,19 @@
+mixin css(src)
+    link(rel="stylesheet", href=src)
+mixin js(src)
+    script(src=src)
+
+doctype html5
+html
+    head
+        title #{title}
+        meta(name="viewport", content="width=device-width,maximum-scale=1,initial-scale=1,user-scalable=0")
+        link(rel="shortcut icon", href="/st/favicon.png")
+        +css("/static/index.css")
+        +js("/static/index.js")
+    body
+        //- block content
+        form.voice(action="/say")
+            input.title(name="title", placeholder="Title")
+            textarea.text(name="text" placeholder="Text to speach")
+            button.submit(type="submit")= "Create voice post"
