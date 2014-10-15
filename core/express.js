@@ -7,7 +7,6 @@ var config = require('../.config.json'),
 exports.app = app;
 
 exports.start = function() {
-    console.log(__dirname + '/../static');
     app
         .configure(function() {
             app
@@ -17,15 +16,12 @@ exports.start = function() {
                 .use(express.cookieParser())
                 .use(express.methodOverride())
                 .use(app.router)
-                .use(express.static(__dirname + '/../static/'));
+                .use(express.static(__dirname + '/../' + config.staticDir));
         });
 
 
     app.get('/', router.index);
     app.get('/say', router.say);
-    app.get('*', function(req, res) {
-        console.log(req.path);
-    });
 
     // start server
     http.createServer(app).listen(config.port, function() {

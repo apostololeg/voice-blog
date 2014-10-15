@@ -9,7 +9,7 @@
     "express": "3.x.x",
     "jade": "*",
     "vow-fs": "*",
-    "get-voice": "*"
+    "get-voice": "git://github.com/truerenton/get-voice.git"
   },
   "author": "truerenton"
 }
