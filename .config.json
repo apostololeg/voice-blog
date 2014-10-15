@@ -1,4 +1,5 @@
 {
     "port": "3030",
-    "clearCronTime": "0 */5 * * * *"
+    "clearCronTime": "0 */5 * * * *",
+    "staticDir": "st"
 }

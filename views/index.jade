@@ -8,12 +8,14 @@ html
     head
         title #{title}
         meta(name="viewport", content="width=device-width,maximum-scale=1,initial-scale=1,user-scalable=0")
-        link(rel="shortcut icon", href="/st/favicon.png")
-        +css("/static/index.css")
-        +js("/static/index.js")
+        //- link(rel="shortcut icon", href="/favicon.png")
+        +css("/index.css")
+        +js("/jquery.js")
+        +js("/index.js")
     body
         //- block content
-        form.voice(action="/say")
+        form.voice
             input.title(name="title", placeholder="Title")
             textarea.text(name="text" placeholder="Text to speach")
-            button.submit(type="submit")= "Create voice post"
+            button.submit(type="submit")= "Say"
+        audio.player(autoplay)
